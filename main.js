@@ -1,30 +1,30 @@
 function hello() {
-    alert('Hello Geniloker!');
+  alert("Hello Geniloker!");
 }
 
-window.onload = function () {
-    const ulCircles = document.querySelector("ul.circles");
+window.onload = function() {
+  const ulCircles = document.querySelector("ul.circles");
 
-    for (let i = 0; i < 11; i++) {
-        const li = document.createElement("li");
+  for (let i = 0; i < 11; i++) {
+    const li = document.createElement("li");
 
-        const random = (min, max) => Math.random() * (max - min) + min;
+    const random = (min, max) => Math.random() * (max - min) + min;
 
-        const size = Math.floor(random(10, 50));
-        const position = random(1, 99);
-        const duration = random(24, 12);
-        const delay = random(5, 0.1);
+    const size = Math.floor(random(5, 30));
+    const position = random(1, 99);
+    const duration = random(24, 12);
+    const delay = random(5, 0.1);
 
-        li.style.width = `${size}px`;
-        li.style.height = `${size}px`;
-        li.style.bottom = `-${size}px`;
+    li.style.width = `${size}px`;
+    li.style.height = `${size}px`;
+    li.style.bottom = `-${size}px`;
 
-        li.style.left = `${position}%`;
+    li.style.left = `${position}%`;
 
-        li.style.animationDelay = `${delay}s`;
-        li.style.animationDuration = `${duration}s`;
-        li.style.animationTimingFunction = `cubic-bezier(${Math.random()}, ${Math.random()}, ${Math.random()}, ${Math.random()})`
+    li.style.animationDelay = `${delay}s`;
+    li.style.animationDuration = `${duration}s`;
+    li.style.animationTimingFunction = `cubic-bezier(${Math.random()}, ${Math.random()}, ${Math.random()}, ${Math.random()})`;
 
-        ulCircles.appendChild(li);
-    }
-}
+    ulCircles.appendChild(li);
+  }
+};
